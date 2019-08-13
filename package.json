@@ -1,10 +1,11 @@
 {
-  "name": "typescript-seed",
+  "name": "discordbot-ts-seed",
   "version": "1.0.0",
-  "description": "A seed project for Typescript node applications",
-  "main": "index.js",
+  "description": "A seed project for a Discord bot written in Typescript",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
+    "build:start": "npm run build && npm run start",
     "start": "node dist/index.js",
     "test": "jest",
     "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.test.ts' --exec node -r ts-node/register src/index.ts",
@@ -13,6 +14,7 @@
   "author": "Jon Barnett",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/jest": "^24.0.17",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
@@ -20,5 +22,9 @@
     "ts-node": "^8.3.0",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0"
   }
 }
